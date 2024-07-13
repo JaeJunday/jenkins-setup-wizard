@@ -1,0 +1,32 @@
+# Node.js 의존성 디렉토리
+node_modules
+npm-debug.log
+
+# Jenkins 작업 디렉토리
+/var/jenkins_home/**
+
+# OS, 편집기, 빌드 도구 관련 파일
+.DS_Store
+*.swp
+*.log
+*.tmp
+*.bak
+*.old
+
+# Git 관련 파일
+.git
+.gitignore
+
+# Docker 관련 파일
+.dockerignore
+Dockerfile
+
+# 기타 빌드 산출물 및 임시 파일
+target/
+dist/
+build/
+tmp/
+.cache/
+coverage/
+.idea/
+.vscode/

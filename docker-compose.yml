@@ -1,0 +1,17 @@
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - ./init.groovy.d:/usr/share/jenkins/ref/init.groovy.d
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:

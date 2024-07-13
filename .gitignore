@@ -19,3 +19,14 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# OS, 편집기, 빌드 도구 관련 파일
+.DS_Store
+*.swp
+*.log
+*.tmp
+*.bak
+*.old
+
+# 젠킨스 설정 파일
+jenkins_home/**
