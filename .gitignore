@@ -30,3 +30,8 @@ gradle-app.setting
 
 # 젠킨스 설정 파일
 jenkins_home/**
+
+# ssl/tls 관련 인증서
+*.cert
+*.pem
+*.key

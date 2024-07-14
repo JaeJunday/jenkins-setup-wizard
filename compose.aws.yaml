@@ -2,12 +2,33 @@ services:
   jenkins:
     container_name: jenkins-aws
     image: leovim5072/jenkins-quick-start:latest
-    ports:
-      - "8080:8080"
-      - "50000:50000"
+    expose:
+      - "8080"
+      - "50000"
     volumes:
       - ./jenkins_home:/var/jenkins_home
     restart: unless-stopped
+    networks:
+      - jenkins_network
+  nginx:
+    container_name: nginx-aws
+    image: nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/ssl/cert.pem:/etc/nginx/ssl/cert.pem
+      - ./nginx/ssl/cert.key:/etc/nginx/ssl/cert.key
+    depends_on:
+      - jenkins
+    networks:
+      - jenkins_network
 
 volumes:
   jenkins_home:
+
+networks:
+  jenkins_network:
+    driver: bridge
