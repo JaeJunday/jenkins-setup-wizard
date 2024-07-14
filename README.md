@@ -5,4 +5,10 @@
 ## 사용법
 
 - config/
-  컨테이너 내부 /usr/share/jenkins/ref/ 경로에 복사될 설정 파일들을 저장합니다.
+
+  - 컨테이너가 시작할 때 젠킨스가 사용할 설정파일들을 넣어둡니다.
+  - 주요 credentials / token 값이 git에 포함되지 않도록 주의해야 합니다.
+
+- jenkins_home/
+
+  - jenkins log, jop, plugin 등 젠킨스 런타임에 마운트하는 디렉토리입니다.
