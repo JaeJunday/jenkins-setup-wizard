@@ -8,11 +8,11 @@ RUN apt-get update && \
     apt-get install -y curl nodejs npm git
 
 # ngrok 설치 (로컬 테스트 터널링 용도 / 배포 버전에선 주석)
-RUN apt-get install gnupg
-RUN curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && \
-    echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && \
-    apt-get update && \
-    apt-get install -y ngrok
+# RUN apt-get install gnupg
+# RUN curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && \
+#     echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && \
+#     apt-get update && \
+#     apt-get install -y ngrok
 
 # 젠킨스 사용자로 전환
 USER jenkins
