@@ -10,7 +10,6 @@ services:
       - "50000:50000"
     volumes:
       - ./jenkins_home:/var/jenkins_home
-      - ./init.groovy.d:/usr/share/jenkins/ref/init.groovy.d
     restart: unless-stopped
 
 volumes:
