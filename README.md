@@ -1,6 +1,6 @@
 # Jenkins-quick-template
 
-젠킨스의 빠른 로컬 테스트와 설정 구성을 위한 템플릿
+리눅스환경에서 젠킨스의 빠른 로컬 테스트와 설정 구성을 위한 템플릿
 
 ## 자동 구성 범위
 ![jenkins diagram](https://github.com/user-attachments/assets/ca8b780f-473f-4254-a722-4a6da3a24309)
