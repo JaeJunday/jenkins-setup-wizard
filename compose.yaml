@@ -23,6 +23,7 @@ services:
       - ./nginx/ssl/cert.key:/etc/nginx/ssl/cert.key
     depends_on:
       - jenkins
+    restart: unless-stopped
     networks:
       - jenkins_network
 
