@@ -21,8 +21,29 @@ docker compose -f docker-compose.aws.yaml # compose.aws.yaml
 
 ### 로컬 브라우저 접속
 ```shell
-http://localhost:80 # 443으로 리다이렉트
 https://localhost:443
+```
+
+## 디렉토리 구조
+
+```
+.
+├── Dockerfile
+├── README.md
+├── compose.aws.yaml
+├── config
+│   ├── init.groovy.d
+│   │   └── init.groovy
+│   └── plugins.txt
+├── init_tls.sh
+└── nginx
+    ├── conf.d
+    │   └── jenkins.conf
+    ├── nginx.conf
+    └── ssl
+        ├── cert.key
+        ├── cert.pem
+        └── nginx.pem
 ```
 
 ### config/
