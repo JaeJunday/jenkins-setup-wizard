@@ -3,7 +3,7 @@
 젠킨스의 빠른 로컬 테스트와 설정 구성을 위한 템플릿
 
 ## 자동 구성 범위
-![image](https://github.com/user-attachments/assets/17a4e931-ed1b-4125-941b-7ff564de8a57)
+![jenkins diagram](https://github.com/user-attachments/assets/ca8b780f-473f-4254-a722-4a6da3a24309)
 
 ## 사용법
 
