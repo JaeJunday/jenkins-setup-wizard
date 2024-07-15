@@ -15,7 +15,7 @@ bash init_tls.sh
 
 ### 도커 컴포즈 실행
 ```shell
-docker compose up --build # compose.yaml
+docker compose up # compose.yaml
 ```
 
 ### 로컬 브라우저 접속
