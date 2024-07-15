@@ -2,6 +2,9 @@
 
 젠킨스의 빠른 로컬 테스트와 설정 구성을 위한 템플릿
 
+## 자동 구성 범위
+![image](https://github.com/user-attachments/assets/17a4e931-ed1b-4125-941b-7ff564de8a57)
+
 ## 사용법
 
 ### ssl/tls 자체 인증서 발급 
