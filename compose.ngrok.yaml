@@ -1,0 +1,21 @@
+services:
+  jenkins:
+    container_name: jenkins-ngrok
+    build:
+      context: .
+      dockerfile: Dockerfile.ngrok
+    image: jenkins:ngrok
+    expose:
+      - "8080"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    restart: unless-stopped
+    networks:
+      - jenkins_network
+
+volumes:
+  jenkins_home:
+
+networks:
+  jenkins_network:
+    driver: bridge
