@@ -17,3 +17,6 @@ ldap
 email-ext
 mailer
 dark-theme
+docker-build-publish
+docker-workflow
+docker-plugin
