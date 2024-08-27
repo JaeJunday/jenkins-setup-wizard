@@ -3,15 +3,12 @@ FROM jenkins/jenkins:lts-jdk17
 # root 사용자로 전환
 USER root
 
-# ngrok 설치 (로컬 테스트 터널링 용도 / 배포 버전에선 주석)
+# ngrok / 도커 설치 (로컬 테스트 터널링 용도 / 배포 버전에선 주석)
 RUN apt-get install gnupg
 RUN curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && \
     echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && \
     apt-get update && \
-    apt-get install -y ngrok
-
-# 젠킨스 사용자로 전환
-USER jenkins
+    apt-get install -y ngrok docker.io
 
 # 추천 플러그인 몽땅 설치 - aws위에서 설치하면 오래걸리기 때문에 레이어에 포함하도록 구성
 COPY config/plugins.txt /usr/share/jenkins/ref/plugins.txt
