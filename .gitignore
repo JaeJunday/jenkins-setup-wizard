@@ -35,3 +35,5 @@ jenkins_home/**
 *.cert
 *.pem
 *.key
+
+.env
