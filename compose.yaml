@@ -7,6 +7,7 @@ services:
       - "50000"
     volumes:
       - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
     networks:
       - jenkins_network
