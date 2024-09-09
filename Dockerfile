@@ -7,6 +7,12 @@ USER root
 RUN apt-get update && \
     apt-get install -y curl git docker.io
 
+# AWS CLI v2 설치 (ARM 아키텍처 호환)
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    ./aws/install && \
+    rm -rf awscliv2.zip aws
+
 # 추천 플러그인 몽땅 설치 - aws위에서 설치하면 오래걸리기 때문에 레이어에 포함하도록 구성
 COPY config/plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt

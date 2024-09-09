@@ -1,7 +1,7 @@
 services:
   jenkins:
     container_name: jenkins-aws
-    image: leovim5072/jenkins-quick-start:latest
+    image: leovim5072/jenkins-setup-wizard:latest
     expose:
       - "8080"
       - "50000"
